@@ -1,3 +1,33 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.upperPart {
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 h1 {
-  color: blue;
+  color: darkslategray;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 28px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }

@@ -15,26 +15,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="upperPart">
-        <h1>Paris</h1>
-        <ul>
-          <li>Monday 06:30</li>
-          <li>Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Cloudy"
-            />
-            -20&deg; C | &deg;F
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation:5&deg;</li>
-              <li>Huminity:15&deg;</li>
-              <li>Wind:17km</li>
-            </ul>
+      <div class="upper-wrapper">
+        <div class="upperPart">
+          <h1>Paris</h1>
+          <ul>
+            <li>Monday 06:30</li>
+            <li>Cloudy</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Cloudy"
+                />
+                <div class="float-left">
+                  <strong id="temperature">20</strong>
+                  ><span class="units">°C| <a href="0">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation:5&deg;</li>
+                <li>Huminity:15&deg;</li>
+                <li>Wind:17km</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>

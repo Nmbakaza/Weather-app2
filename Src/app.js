@@ -48,3 +48,26 @@ function SearchCity(event) {
   let city = cityNameElement.innerHTML;
   axios.get(apiUrl + "&q=" + city).then(showTemp);
 }
+
+let celsius = document.querySelector("#Celcius");
+celsius.addEventListener("click", setCelsius);
+
+function setCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(((tempElement.innerHTML - 32) * 5) / 9);
+}
+let fahrenheitTemperature = document.querySelector("#Fahrenheit");
+fahrenheitTemperature.addEventListener("click", setfahrenheit);
+
+function setfahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round((tempElement.innerHTML * 9) / 5 + 32);
+}
+
+window.onload = function () {
+  let cityNameElement = document.querySelector("#cityName");
+  let city = cityNameElement.innerHTML;
+  axios.get(apiUrl + "&q=" + city).then(showTemp);
+};

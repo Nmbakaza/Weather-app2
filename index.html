@@ -10,10 +10,10 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <body>
+  <body id="Home">
     <div class="container">
       <div class="upper-wrapper">
         <div class="upperPart">
@@ -21,13 +21,17 @@
             <div class="row">
               <div class="col-9">
                 <input
+                  id="citySearch"
                   type="search"
-                  placeholder="Type a city..."
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
                   class="form-control"
                 />
               </div>
               <div class="col-3">
                 <input
+                  id="btnSearch"
                   type="submit"
                   value="search"
                   class="btn btn-primary w-100"
@@ -35,10 +39,10 @@
               </div>
             </div>
           </form>
-          <h1>London,UK</h1>
+          <h1 id="cityName">London,UK</h1>
           <ul>
-            <li>Monday 06:30</li>
-            <li>Cloudy</li>
+            <li id="showDate"></li>
+            <li id="temp-description">Cloudy</li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -49,15 +53,18 @@
                 />
                 <div class="float-left">
                   <strong id="temperature">20</strong>
-                  <span class="units">°C| <a href="0">°F</a></span>
+                  <span class="units"
+                    ><a href="#" id="Celcius">°C</a> |
+                    <a href="#" id="Fahrenheit">°F</a></span
+                  >
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Precipitation:5&deg;</li>
-                <li>Huminity:15&deg;</li>
-                <li>Wind:17km</li>
+                <li id="Humidity">Humidity:15&deg;</li>
+                <li id="Wind">Wind:17km</li>
               </ul>
             </div>
           </div>
@@ -71,7 +78,7 @@
                   width="30"
                 />
                 <div class="weather-temp">
-                  <span class="weather-min-forcast">12° </span
+                  <span id="temp" class="weather-min-forcast">12° </span
                   ><span class="weather-max-forcast">30° </span>
                 </div>
               </div>
@@ -88,6 +95,6 @@
         </small>
       </div>
     </div>
-    <script src="Src/app.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>

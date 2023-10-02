@@ -1,5 +1,3 @@
-import axios from "axios";
-
 let days = [
   "Sunday",
   "Monday",
@@ -20,10 +18,16 @@ function showTemp(response) {
   let tempDesc = document.querySelector("#temp-description");
   let Humidity = document.querySelector("#Humidity");
   let Wind = document.querySelector("#Wind");
+  let iconElement = document.querySelector("#icon");
   tempElement.innerHTML = Math.round(response.data.main.temp);
   tempDesc.innerHTML = response.data.weather[0].description;
   Humidity.innerHTML = "Humidity: " + response.data.main.humidity;
   Wind.innerHTML = "Wind: " + Math.round(response.data.wind.speed) + "km";
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let date = document.querySelector("#showDate");
